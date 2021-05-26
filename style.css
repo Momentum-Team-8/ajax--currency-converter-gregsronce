@@ -2,4 +2,38 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header {
+  padding: 40px;
+}
+
+.header h2 {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+#container > h1 {
+  margin-left: 40px;
+}
+
+#container > h2 {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 50px;
+}
+
+#container > h3 {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 50px;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
 }
