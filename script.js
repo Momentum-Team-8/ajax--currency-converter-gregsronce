@@ -62,21 +62,21 @@ for (let currency of currencies) {
   root.appendChild(currencyTo)
 }
 
-fetch(url)
-.then((res) => res.json())
-.then((data) => {
-  console.log(data)
-  // let currencyTo = document.createElement('h4')
-  // currencyTo.innerText = '1' + ' ' + data.base + '= '
-  // divFooter.appendChild(currencyTo)
-})   
+// fetch(url)
+// .then((res) => res.json())
+// .then((data) => {
+//   console.log(data)
+//   // let currencyTo = document.createElement('h4')
+//   // currencyTo.innerText = '1' + ' ' + data.base + '= '
+//   // divFooter.appendChild(currencyTo)
+// })   
 
 
 let divFooter = document.createElement('div')
 document.getElementById('footer').appendChild(divFooter);
 
 let input = document.createElement('input')
-input.classList.add('number-button')
+input.classList.add('number-input')
 divFooter.appendChild(input)
 
 let convertButton = document.createElement('button')
@@ -84,12 +84,29 @@ convertButton.classList.add('convert-button')
 convertButton.innerText = 'Convert!'
 divFooter.appendChild(convertButton)
 
-let output = document.createElement('h3')
-output.classList.add('output')
-divFooter.appendChild(output)
+// let output = document.createElement('h3')
+// output.classList.add('output')
+// divFooter.appendChild(output)
 
-document.querySelector('.convert-button').addEventListener('click', function (event) {
-  console.log(event.target)})
+currencyFrom.addEventListener('input', function (event) {
+  console.log(event.target)
+
+})
+
+currencyTo.addEventListener('input', function (event) {
+  console.log(event.target)
+
+})
+
+convertButton.addEventListener('click', function (event) {
+  fetch(url)
+.then((res) => res.json())
+.then((data) => {
+  console.log(data)  
+  let output = document.createElement('h3')
+output.classList.add('output')
+output.innerText = data.rates.USD
+divFooter.appendChild(output)})})
 
 // addEventListener('click', function (event) {
 //   console.log(event.target.innerText)
@@ -100,4 +117,5 @@ document.querySelector('.convert-button').addEventListener('click', function (ev
 //   output.innerText = display
 //   console.log(eval(output.innerText))})
   
-// if or statement?
+// if currencyTo.input === data.rates
+
