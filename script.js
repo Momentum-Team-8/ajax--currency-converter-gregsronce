@@ -62,16 +62,6 @@ for (let currency of currencies) {
   root.appendChild(currencyTo)
 }
 
-// fetch(url)
-// .then((res) => res.json())
-// .then((data) => {
-//   console.log(data)
-//   // let currencyTo = document.createElement('h4')
-//   // currencyTo.innerText = '1' + ' ' + data.base + '= '
-//   // divFooter.appendChild(currencyTo)
-// })   
-
-
 let divFooter = document.createElement('div')
 document.getElementById('footer').appendChild(divFooter);
 
@@ -84,20 +74,6 @@ convertButton.classList.add('convert-button')
 convertButton.innerText = 'Convert!'
 divFooter.appendChild(convertButton)
 
-// let output = document.createElement('h3')
-// output.classList.add('output')
-// divFooter.appendChild(output)
-
-currencyFrom.addEventListener('input', function (event) {
-  console.log(event.target)
-
-})
-
-currencyTo.addEventListener('input', function (event) {
-  console.log(event.target)
-
-})
-
 convertButton.addEventListener('click', function (event) {
   fetch(url)
 .then((res) => res.json())
@@ -105,17 +81,8 @@ convertButton.addEventListener('click', function (event) {
   console.log(data)  
   let output = document.createElement('h3')
 output.classList.add('output')
-output.innerText = data.rates.USD
-divFooter.appendChild(output)})})
+divFooter.appendChild(output)
+// output.innerText = eval(data.rates[currencyTo.value] / data.rates[currencyFrom.value] * input.value) + ' ' + currencyTo.value
+console.log(output.innerText)})})
 
-// addEventListener('click', function (event) {
-//   console.log(event.target.innerText)
-//   output.innerText += event.target.innerText})
-
-// convertButton.addEventListener('click', function (event) {
-//   const display = eval(output.innerText)
-//   output.innerText = display
-//   console.log(eval(output.innerText))})
-  
-// if currencyTo.input === data.rates
-
+// Thanks to Wendy for figuring out the final eval!! Don't quite understand how it works, so going to comment it out. 
