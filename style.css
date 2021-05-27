@@ -6,12 +6,16 @@
 }
 
 .header {
-  padding: 40px;
+  margin-left: 40px;
 }
 
 .header h2 {
   margin-top: 30px;
   font-size: 30px;
+}
+
+select {
+  margin-left: 40px;
 }
 
 #container > h1 {
@@ -23,6 +27,7 @@
   margin-left: 40px;
   font-size: 50px;
 }
+
 
 #container > h3 {
   margin-top: 20px;
